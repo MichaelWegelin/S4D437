@@ -1,0 +1,10 @@
+extension for projection;
+
+extend behavior for Travel
+{
+}
+
+extend behavior for Item
+{
+    use action ZZCheckClass;
+}

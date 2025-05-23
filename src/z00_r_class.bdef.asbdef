@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_00_r_class unique;
+strict ( 2 );
+
+define behavior for Z00_R_CLASS //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) ClassID;
+}

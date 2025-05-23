@@ -1,0 +1,24 @@
+extension implementation in class zbp_00x_r_travel unique;
+
+extend behavior for Travel
+{
+}
+
+extend behavior for Item
+with additional save
+{
+    validation ZZValidateClass on save {
+        create;
+        field ZZClassZit;
+    }
+
+    determine action (authorization : none ) ZZCheckClass
+    {
+        validation ZZValidateClass;
+    }
+    side effects {
+        determine action ZZCheckClass
+        executed on field ZZClassZit
+        affects messages;
+    }
+}
